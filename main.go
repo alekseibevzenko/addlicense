@@ -217,7 +217,7 @@ func licenseHeader(path string, tmpl *template.Template, data *copyrightData) ([
 		lic, err = prefix(tmpl, data, "", ";; ", "")
 	case ".erl":
 		lic, err = prefix(tmpl, data, "", "% ", "")
-	case ".hs", ".sql":
+	case ".hs":
 		lic, err = prefix(tmpl, data, "", "-- ", "")
 	case ".xml":
 		lic, err = prefix(tmpl, data, "<!--", " ", "-->")
