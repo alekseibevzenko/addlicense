@@ -219,8 +219,6 @@ func licenseHeader(path string, tmpl *template.Template, data *copyrightData) ([
 		lic, err = prefix(tmpl, data, "", "% ", "")
 	case ".hs":
 		lic, err = prefix(tmpl, data, "", "-- ", "")
-	case ".xml":
-		lic, err = prefix(tmpl, data, "<!--", " ", "-->")
 	case ".php":
 		lic, err = prefix(tmpl, data, "", "// ", "")
 	case ".ml", ".mli", ".mll", ".mly":
