@@ -205,9 +205,9 @@ func licenseHeader(path string, tmpl *template.Template, data *copyrightData) ([
 	switch fileExtension(path) {
 	default:
 		return nil, nil
-	case ".c", ".h":
+	case ".c", ".h", ".java":
 		lic, err = prefix(tmpl, data, "/*", " * ", " */")
-	case ".tf", ".java":
+	case ".tf":
 		lic, err = prefix(tmpl, data, "/**", " * ", " */")
 	case ".cc", ".cpp", ".cs", ".go", ".hh", ".hpp", ".m", ".mm", ".proto", ".rs", ".scala", ".swift", ".dart", ".groovy", ".kt", ".kts":
 		lic, err = prefix(tmpl, data, "", "// ", "")
